@@ -69,9 +69,17 @@ let testSampleList = [
 ];
 
 function wordLengthClassifier(wordsList) {
-    // :)
+    const ordenadoArray = wordsList.sort(function(a, b) {return b.length - a.length});
+    const tamañoArray = ordenadoArray.length
+    let sumatoriaPalabras = 0
+    wordsList.forEach(word => {
+        sumatoriaPalabras += word.length
+        
+    })
+    return {palabraLarga: ordenadoArray[0], palabraCorta: ordenadoArray[tamañoArray-1], promedio: sumatoriaPalabras/tamañoArray}
 }
-
+console.log("Ejercicio 3");
+console.log(wordLengthClassifier(testSampleList));
 
 /*Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
 
