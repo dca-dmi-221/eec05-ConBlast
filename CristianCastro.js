@@ -137,8 +137,12 @@ let wordArrayA = ["hola", "¿" ,"cómo", "estás", "?"];
 let wordArrayB = ["te", "ves" ,"igual", "te", "ves", "igual"];
 
 function arrayJoiner(listA, listB) {
- // :)
+ let juntarArreglos = listA.concat(listB);
+ return juntarArreglos
 }
+
+console.log("Ejercicio 6");
+console.log(arrayJoiner(wordArrayA,wordArrayB));
 
 
 /*Dado un arreglo de strings indicar qué posiciones del arreglo
