@@ -178,7 +178,8 @@ let testObjMultiContainer = {
 function vocalsRemoverFromObject(objectMultiContainer) {
     let ArrayCombinao = objectMultiContainer.listA.concat(objectMultiContainer.listB)
     console.log(ArrayCombinao)
-    let arregloCorregido = ArrayCombinao.map(word => normalize('NFD').replace(/[\u0300-\u036f]/g,""];)
+    let arregloCorregido = ArrayCombinao.map(word => word.normalize('NFD').replace(/[\u0300-\u036f]/g,""))
+    console.log(arregloCorregido)
 }
 
 vocalsRemoverFromObject(testObjMultiContainer);
