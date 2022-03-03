@@ -171,14 +171,18 @@ arreglo que contiene las palabras sin vocales.*/
 
 let testObjMultiContainer = {
     listA : ["piraña", "cachama", "tilapia", "trucha", "carpa", "salmón"],
-    listB : ["rinoceronte", "elefante", "jirafa", "tigre", "gacela", "ñú"]
+    listB : ["rinoceronte", "elefante", "jirafa", "tigre", "gacela", "ñú"],
 };
 
+
 function vocalsRemoverFromObject(objectMultiContainer) {
-    // :)
+    let ArrayCombinao = objectMultiContainer.listA.concat(objectMultiContainer.listB)
+    console.log(ArrayCombinao)
+    let arregloCorregido = ArrayCombinao.map(word => normalize('NFD').replace(/[\u0300-\u036f]/g,""];)
 }
 
-console.log(vocalsRemoverFromObject(testObjMultiContainer));
+vocalsRemoverFromObject(testObjMultiContainer);
+//console.log(vocalsRemoverFromObject(testObjMultiContainer));
 
 /*Dado un arreglo de palabras reemplazar la última vocal por una x y retornar dicho arreglo.*/
 
