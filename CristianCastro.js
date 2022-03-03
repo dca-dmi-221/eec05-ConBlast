@@ -35,8 +35,20 @@ let testWordsList = [
 
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
-   // :)
+    const newWordlist = wordsList.map(word => word.toUpperCase())
+   if (newWordlist.includes(targetWord.toUpperCase())){
+       console.log("La palabra " + targetWord + " SI está incluída")
+   }
+   else{
+        console.log("La palabra " + targetWord + " NO está incluída")
+   }
 }
+
+console.log("Ejercicio 2")
+wordSearcherIgnoreCase(testTargetWordA, testWordsList);
+wordSearcherIgnoreCase(testTargetWordB, testWordsList);
+wordSearcherIgnoreCase(testTargetWordC, testWordsList);
+
 
 
 
