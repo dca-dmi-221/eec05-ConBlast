@@ -86,11 +86,25 @@ console.log(wordLengthClassifier(testSampleList));
 let onVerificationWordA = "reconocer";
 let onVerificationWordB = "querer";
 let onVerificationWordC = "Gomosos";
-let onVerificationWordD = "Somos";
+let onVerificationWordD = "Somos"; 
 
 function palindromeVerifier(word) {
-   // :)
+   const palabraDerecho = word.toLowerCase()
+   const palabraReves = word.toLowerCase().split("").reverse().join("")
+   
+   if (palabraDerecho === palabraReves) {
+       console.log("La palabra " + word + " SI es palíndromo")
+   }
+   else {
+    console.log("La palabra " + word + " NO es palíndromo")
+   }
 }
+
+console.log("Ejercicio 4")
+palindromeVerifier(onVerificationWordA);
+palindromeVerifier(onVerificationWordB);
+palindromeVerifier(onVerificationWordC);
+palindromeVerifier(onVerificationWordD);
 
 
 /*Dado un objeto que contiene una lista de palabras contar el
